@@ -3,6 +3,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes";
 import authRoutes from "./routes/authRoutes";
+import organisationRoutes from "./routes/organisationRoutes";
+import projectRoutes from "./routes/projectRoutes";
+import issueRoutes from "./routes/issueRoutes";
 
 dotenv.config();
 
@@ -14,6 +17,10 @@ app.use(cors());
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/organisations", organisationRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/issues", issueRoutes);
+
 
 app.get("/", (req, res) => {
   res.send("API is running");

@@ -20,3 +20,27 @@ model User {
   role      String   @default("agent")
   createdAt DateTime @default(now())
 }
+
+model Organisation {
+  id        String   @id @default(cuid())
+  name      String
+  ownerId   String
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id             String   @id @default(cuid())
+  name           String
+  organisationId String
+  createdAt      DateTime @default(now())
+}
+
+model Issue {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  status      String   @default("todo")
+  priority    String   @default("medium")
+  projectId   String
+  createdAt   DateTime @default(now())
+}
