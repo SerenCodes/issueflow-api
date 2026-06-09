@@ -13,7 +13,7 @@ The application allows users to register and log in, create organisations and pr
 
 ## Why I Built It
 
-I built IssueFlow to practise building a real-world backend application with authentication, database relationships and REST APIs.
+I built IssueFlow to practise building backend systems with authentication, database relationships and REST APIs.
 
 
 ## Features
